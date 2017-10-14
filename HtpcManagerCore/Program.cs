@@ -11,7 +11,9 @@ namespace HtpcManagerCore
         {
             Console.WriteLine($"HtpcManager Program started on {DateTime.Now.ToString("R")}");
 
-            FileHandler.MoveAllFiles();
+            FileHandler fileHandler = new FileHandler(args);
+            fileHandler.MoveAllFiles();
+            //FileHandler.MoveAllFiles(args);
 
 
             Console.Read();
