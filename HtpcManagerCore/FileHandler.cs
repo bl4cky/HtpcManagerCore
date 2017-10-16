@@ -24,7 +24,7 @@ namespace HtpcManagerCore
             filePaths.ForEach(filePath => MoveFile(filePath));
         }
 
-        private  void MoveFile(string filePath)
+        private void MoveFile(string filePath)
         {
             Console.WriteLine(filePath);
             _actualFile = new FileInfo(filePath);
@@ -34,7 +34,7 @@ namespace HtpcManagerCore
                 string destFileName = MoveMovie();
                 Console.WriteLine($"Successfully moved \"{_actualFile.Name}\" to directory {destFileName}");
             }
-            
+
         }
 
         /// <summary>
